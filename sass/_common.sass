@@ -93,6 +93,10 @@ a
 		vertical-align: top
 		font-style: italic
 		color: #FFF 
+		+tr(all .2s linear)
+		&:hover
+			background: $cl
+			color: #000  
 
 .header
 	position: fixed
@@ -100,18 +104,6 @@ a
 	left: 0
 	right: 0
 	z-index: 100 
-	&.is-fixed
-		.header__top
-			height: 62px
-		.logo
-			visibility: hidden
-			opacity: 0 
-		.header__links
-			padding-top: 20px
-			li
-				&.is-center
-					visibility: visible
-					opacity: 1 
 .header__top
 	position: relative
 	height: 100px
@@ -149,10 +141,14 @@ a
 			opacity: 0
 			+tr(opacity .2s linear) 
 	a
+		border-bottom: 1px dotted transparent
 		+fr
 		font-size: 14px
 		font-weight: 300 
 		color: #FFF 
+		+tr(border-color .2s linear) 
+		&:hover
+			border-color: #fff
 .header__down
 	background: #FFF 
 .header__down-in
@@ -173,7 +169,8 @@ a
 		border-bottom: 1px dotted transparent 
 		+tr(all .2s linear)
 		&:hover
-			color: $cl 
+			border-bottom: 1px dotted $cl 
+			color: #8B8B8B 
 		&.is-active	
 			border-bottom: 1px dotted $cl 
 			color: #8B8B8B 
@@ -181,7 +178,6 @@ a
 	float: right
 	li
 		float: left
-		margin-left: 5px
 		&:first-child
 			margin: 0
 		&.is-active
@@ -190,7 +186,14 @@ a
 	a
 		font-size: 12px
 		color: #000
-		
+		&:hover
+			border-bottom: 1px dotted $cl 
+			color: #8B8B8B 
+		&.is-active	
+			border-bottom: 1px dotted $cl 
+			color: #8B8B8B 
+	span
+		margin: 0 5px
 .pager
 	position: fixed
 	top: 175px 
