@@ -11,10 +11,9 @@ var header = $('.header'),
 // lazyload
 if (lazy.length) {
   lazy.lazyload({
-    effect : 'fadeIn',
-    //delay: 1000,
+    //effect : 'fadeIn',
     load : function(){
-      //$(this).addClass('is-load');
+      $(this).parents('.page').addClass('is-load');
     }
   });
 };

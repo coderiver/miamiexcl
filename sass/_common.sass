@@ -103,6 +103,7 @@ a
 	top: 0
 	left: 0
 	right: 0
+	min-width: 1024px
 	z-index: 100 
 .header__top
 	position: relative
@@ -121,7 +122,7 @@ a
 	+s(logo)
 .header__links
 	width: 940px
-	padding-top: 55px
+	padding-top: 56px
 	margin: 0 auto
 	text-align: center
 	+tr(padding-top .2s linear)
@@ -212,12 +213,28 @@ a
 			border-color: $cl
 		&.is-active
 			border-color: #8B8B8B 
+
+.preloader
+	position: absolute
+	top: 50%
+	left: 50%
+	width: 50px
+	height: 50px
+	margin: -25px 0 0 -25px
+	background: url(../img/preloader.gif)  
 		 
 .page
 	position: relative
 	height: 100vh
 	color: #fff 
-	+perspective(1000px)
+	//+perspective(1000px)
+	&.is-load
+		.page__nav
+			+transition-delay(.2s)
+			left: 0
+		.page__bg
+			visibility: visible
+			opacity: 1 
 .page__bg
 	position: absolute
 	top: 0
@@ -225,33 +242,37 @@ a
 	right: 0
 	bottom: 0
 	+cover
+	visibility: hidden
+	opacity: 0 
 	//+transform-style(preserve-3d)
-	//+tr(all .3s ease-out)
+	+tr(opacity .2s linear)
 	//+transform(rotateY(10deg))
 	z-index: 2 
-	&.is-load
-		//+transform(rotateY(0deg))
 .page__nav
 	position: absolute
 	top: 0
-	left: 0
+	left: -200px
 	right: 0
 	bottom: 0
 	width: 120px
 	padding: 170px 40px 40px
 	background: #6E939C 
 	background: rgba(110,147,156,.9) 
+	+tr(left .2s linear)
 	z-index: 4 
 	li
 		margin-top: 20px
 		&:first-child
 			margin: 0
 	a
+		border-bottom: 1px dotted transparent 
 		color: #fff
-		+tr(color .2s linear) 
+		+tr(all .2s linear) 
 		&:hover
+			border-color: #B6ECFF 
 			color: #B6ECFF 
 .page__content
+	display: none
 	position: absolute
 	top: 0
 	left: 200px
@@ -318,9 +339,25 @@ a
 	z-index: 2 
 
 
-
-
-
+.footer__text
+	padding: 57px 0
+	background: #E9E6D6 
+	font-size: 18px
+	color: #806736 
+	text-align: center
+.copyright
+	padding: 13px 0
+	background: #C8C1AC 
+	text-align: center
+	a
+		border-bottom: 1px dotted transparent 
+		+fr
+		text-transform: uppercase
+		font-size: 10px
+		color: #857e6b
+		+tr(border-color .2s linear)
+		&:hover
+			border-color: #857e6b
 
 
 

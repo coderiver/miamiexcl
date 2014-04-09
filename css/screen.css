@@ -40,13 +40,13 @@ a { text-decoration: none; }
 .main__membership a { display: inline-block; width: 152px; height: 34px; border: 3px solid #d7b56d; line-height: 34px; vertical-align: top; font-style: italic; color: white; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
 .main__membership a:hover { background: #d7b56d; color: black; }
 
-.header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; }
+.header { position: fixed; top: 0; left: 0; right: 0; min-width: 1024px; z-index: 100; }
 
 .header__top { position: relative; height: 100px; background: black; background: rgba(0, 0, 0, 0.58); -webkit-transition: height 0.2s linear; -moz-transition: height 0.2s linear; -o-transition: height 0.2s linear; transition: height 0.2s linear; overflow: hidden; }
 
 .logo { position: absolute; top: 17px; left: 50%; margin-left: -130px; visibility: visible; -webkit-transition: opacity 0.2s linear; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; transition: opacity 0.2s linear; background: url('../img/icons-s6257e5f103.png') 0 0 no-repeat; width: 260px; height: 66px; }
 
-.header__links { width: 940px; padding-top: 55px; margin: 0 auto; text-align: center; -webkit-transition: padding-top 0.2s linear; -moz-transition: padding-top 0.2s linear; -o-transition: padding-top 0.2s linear; transition: padding-top 0.2s linear; *zoom: 1; }
+.header__links { width: 940px; padding-top: 56px; margin: 0 auto; text-align: center; -webkit-transition: padding-top 0.2s linear; -moz-transition: padding-top 0.2s linear; -o-transition: padding-top 0.2s linear; transition: padding-top 0.2s linear; *zoom: 1; }
 .header__links:after { content: " "; display: table; clear: both; }
 .header__links li { float: left; margin-left: 30px; }
 .header__links li:first-child { margin: 0; }
@@ -83,17 +83,21 @@ a { text-decoration: none; }
 .pager a:hover { border-color: #d7b56d; }
 .pager a.is-active { border-color: #8b8b8b; }
 
-.page { position: relative; height: 100vh; color: white; -webkit-perspective: 1000px; -moz-perspective: 1000px; -ms-perspective: 1000px; -o-perspective: 1000px; perspective: 1000px; }
+.preloader { position: absolute; top: 50%; left: 50%; width: 50px; height: 50px; margin: -25px 0 0 -25px; background: url(../img/preloader.gif); }
 
-.page__bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; z-index: 2; }
+.page { position: relative; height: 100vh; color: white; }
+.page.is-load .page__nav { -webkit-transition-delay: 0.2s; -moz-transition-delay: 0.2s; -o-transition-delay: 0.2s; transition-delay: 0.2s; left: 0; }
+.page.is-load .page__bg { visibility: visible; opacity: 1; }
 
-.page__nav { position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 120px; padding: 170px 40px 40px; background: #6e939c; background: rgba(110, 147, 156, 0.9); z-index: 4; }
+.page__bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; visibility: hidden; opacity: 0; -webkit-transition: opacity 0.2s linear; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; transition: opacity 0.2s linear; z-index: 2; }
+
+.page__nav { position: absolute; top: 0; left: -200px; right: 0; bottom: 0; width: 120px; padding: 170px 40px 40px; background: #6e939c; background: rgba(110, 147, 156, 0.9); -webkit-transition: left 0.2s linear; -moz-transition: left 0.2s linear; -o-transition: left 0.2s linear; transition: left 0.2s linear; z-index: 4; }
 .page__nav li { margin-top: 20px; }
 .page__nav li:first-child { margin: 0; }
-.page__nav a { color: white; -webkit-transition: color 0.2s linear; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; transition: color 0.2s linear; }
-.page__nav a:hover { color: #b6ecff; }
+.page__nav a { border-bottom: 1px dotted transparent; color: white; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
+.page__nav a:hover { border-color: #b6ecff; color: #b6ecff; }
 
-.page__content { position: absolute; top: 0; left: 200px; bottom: 0; width: 340px; padding: 180px 25px 25px; background: #92c3cf; background: rgba(146, 195, 207, 0.9); z-index: 4; }
+.page__content { display: none; position: absolute; top: 0; left: 200px; bottom: 0; width: 340px; padding: 180px 25px 25px; background: #92c3cf; background: rgba(146, 195, 207, 0.9); z-index: 4; }
 
 .page__content_right { width: 50%; left: 50%; right: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-size: 0; }
 .page__content_right:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
@@ -108,6 +112,12 @@ a { text-decoration: none; }
 .text:before { content: ""; position: absolute; top: 50%; left: 50%; width: 800px; height: 800px; margin: -400px 0 0 -400px; background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, rgba(255, 255, 255, 0.7)), color-stop(100%, rgba(255, 255, 255, 0))); background-image: -webkit-radial-gradient(50% 50%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)); background-image: -moz-radial-gradient(50% 50%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)); background-image: -o-radial-gradient(50% 50%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)); background-image: radial-gradient(50% 50%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)); }
 
 .text__in { position: relative; width: 560px; margin: 0 auto; padding: 45px 0; text-align: center; color: #7a6c46; z-index: 2; }
+
+.footer__text { padding: 57px 0; background: #e9e6d6; font-size: 18px; color: #806736; text-align: center; }
+
+.copyright { padding: 13px 0; background: #c8c1ac; text-align: center; }
+.copyright a { border-bottom: 1px dotted transparent; font-family: "Roboto", Arial, sans-serif; text-transform: uppercase; font-size: 10px; color: #857e6b; -webkit-transition: border-color 0.2s linear; -moz-transition: border-color 0.2s linear; -o-transition: border-color 0.2s linear; transition: border-color 0.2s linear; }
+.copyright a:hover { border-color: #857e6b; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
