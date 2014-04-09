@@ -39,11 +39,243 @@
 // +font(book, cytiapro-black-webfont)  
 // =book
 // 	font-family: "book",arial,sans-serif 
+
+$cl: #d7b56d
 	
 body
-	font-size: 12px 
+	min-width: 1000px
 	font-family: Arial, sans-serif 
+	font-size: 14px 
 	line-height: 1.4
+a
+	text-decoration: none
 
 
 // common blocks
+.main
+	position: relative
+	height: 100vh
+	min-height: 600px 
+	background: url(../img/main.jpg)
+	+cover 
+.main__in
+	width: 940px
+	margin: 0 auto
+.main__center
+	display: table-cell
+	width: 940px
+	height: 100vh
+	padding-top: 200px
+	vertical-align: middle
+	text-align: center
+	color: #fff 
+	+box
+.main__welcome
+	text-transform: uppercase
+	font-size: 30px
+.main__title
+	font-size: 72px
+.main__title-sub
+	margin-bottom: 30px
+	font-size: 18px
+.main__membership	
+	a
+		display: inline-block
+		width: 152px
+		height: 34px
+		border: 3px solid $cl
+		line-height: 34px
+		vertical-align: top
+		color: #fff 
+
+.header
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+.header__top
+	position: relative
+	height: 100px
+	background: #000 
+	background: rgba(0,0,0,.58) 
+.logo
+	position: absolute
+	top: 17px
+	left: 50% 
+	margin-left: -130px
+	+s(logo)
+.header__links
+	width: 940px
+	padding-top: 60px
+	margin: 0 auto
+	+clr
+	li
+		float: left
+		margin-left: 30px
+		&:first-child
+			margin: 0
+		&.is-right
+			float: right
+	a
+		color: #FFF 
+.header__down
+	background: #FFF 
+.header__down-in
+	width: 940px
+	padding: 12px 0
+	margin: 0 auto
+	+clr
+.nav
+	float: left
+	ul, li
+		float: left
+	li
+		margin-left: 30px
+		&:first-child
+			margin: 0
+		&.is-active
+			a
+				color: $cl 
+	a
+		color: #000 
+.lang
+	float: right
+	li
+		float: left
+		margin-left: 5px
+		&:first-child
+			margin: 0
+		&.is-active
+			a
+				color: #9a9a9a 
+	a
+		font-size: 12px
+		color: #000
+		 
+.page
+	position: relative
+	height: 100vh
+	color: #fff 
+	+perspective(1000px)
+.page__bg
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	+cover
+	+transform-style(preserve-3d)
+	+tr(all .3s ease-out)
+	+transform(rotateY(10deg))
+	z-index: 2 
+	&.is-load
+		+transform(rotateY(0deg))
+.page__nav
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: 120px
+	padding: 120px 40px
+	background: #6E939C 
+	background: rgba(110,147,156,.9) 
+	z-index: 4 
+	li
+		margin-top: 20px
+		&:first-child
+			margin: 0
+	a
+		color: #fff 
+.page__content
+	position: absolute
+	top: 0
+	left: 200px
+	bottom: 0
+	width: 340px
+	padding: 130px 25px  
+	background: #92c3cf 
+	background: rgba(146,195,207,.9) 
+	z-index: 4 
+.page__content_right
+	width: 50%
+	left: 50%
+	right: 0
+	+box
+	font-size: 0
+	&:before
+		content: ""
+		display: inline-block
+		width: 0
+		height: 100%
+		vertical-align: middle
+	.page__content-in
+		display: inline-block
+		padding: 0 30px 0 60px
+		vertical-align: middle
+		font-size: 14px
+
+.content
+	line-height: 1.6
+
+.title
+	position: relative
+	padding: 25px 0 
+	font-size: 48px
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 20px
+		height: 1px
+		background: #fff  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

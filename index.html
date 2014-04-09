@@ -8,15 +8,84 @@
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
+	<script src="js/jquery.lazyload.min.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
-
-<!-- BEGIN  out-->
-<div class="out">
-
+<!-- main -->
+<div class="main">
+	<!-- header -->
+	<header class="header">
+		<div class="header__top">
+			<a class="logo" href="#"></a>
+			<ul class="header__links">
+				<li><a href="#">Luxury Concierge</a></li>
+				<li><a href="#">Property management</a></li>
+				<li class="is-right"><a href="#">Event planning</a></li>
+				<li class="is-right"><a href="#">LA CHIC Catering</a></li>
+			</ul>
+		</div>
+		<div class="header__down">
+			<div class="header__down-in">
+				<!-- nav -->
+				<nav class="nav">
+					<ul>
+						<li class="is-active"><a href="#">Home</a></li>                
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Get Membership</a></li>
+						<li><a href="#">Login</a></li>
+					</ul>
+				</nav>
+				<!-- lang -->
+				<ul class="lang">
+					<li class="is-active"><a href="#">English /</a></li>
+					<li><a href="#">Русский /</a></li>
+					<li><a href="#">Spanish</a></li>
+				</ul>
+			</div>
+		</div> 
+	</header>
+	<!-- main__in -->
+	<div class="main__in">
+		<div class="main__center">
+			<div class="main__welcome">Welcome to </div>
+			<div class="main__title">Miami Exclusive</div>
+			<div class="main__title-sub">Premium Travel and Concierge Services.</div>
+			<div class="main__membership">
+				<a href="#">Membership</a>
+			</div>
+		</div>
+	</div>
 </div>
-<!-- END out-->
-
+<!-- page -->
+<div class="page">
+	<a class="page__bg lazy-load" data-original="img/page1.jpg" href="#" style="background-image: url(img/blank.gif)"></a>
+	<nav class="page__nav">
+		<ul>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Our Team</a></li>
+			<li><a href="#">Our Philosophy</a></li>
+			<li><a href="#">Our Mission</a></li>
+			<li><a href="#">Our Clients</a></li>
+		</ul>
+	</nav>
+	<div class="page__content">
+		<div class="page__content-in">
+			<div class="title">About Us</div>
+			<div class="content">Miami Exclusive delivers exceptional quality concierge and errand services. We empower our clients by providing administrative and operational assistance and also offer valuable discounts on a wide range of time management products and services.</div>
+		</div>
+	</div>
+</div>
+<!-- page -->
+<div class="page">
+	<a class="page__bg lazy-load" data-original="img/page1.jpg" href="#" style="background-image: url(img/blank.gif)"></a>
+	<div class="page__content page__content_right">
+		<div class="page__content-in">
+			<div class="title">Luxury Concierge</div>
+			<div class="content">Miami Exclusive delivers exceptional quality concierge and errand services. We empower our clients by providing administrative and operational assistance and also offer valuable discounts on a wide range of time management products and services.</div>
+		</div>
+	</div>
+</div>
 </body>
 </html>
