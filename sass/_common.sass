@@ -38,14 +38,16 @@
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
 +font(Garamond, garamond)  
 =f
-	font-family: "Garamond", Arial, serif 
+	font-family: "Prata", Arial, serif 
+=fr
+	font-family: "Roboto", Arial, sans-serif 
 
 $cl: #d7b56d
 	
 body
 	min-width: 1000px
 	+f
-	font-size: 16px 
+	font-size: 14px 
 	line-height: 1.4
 a
 	text-decoration: none
@@ -71,15 +73,16 @@ a
 	color: #fff 
 	+box
 .main__welcome
-	text-transform: uppercase
-	font-size: 32px
+	+fr
+	font-size: 30px
+	font-weight: 400 
 	text-transform: uppercase
 .main__title
-	font-size: 74px
+	font-size: 72px
 	font-style: italic
 .main__title-sub
 	margin-bottom: 30px
-	font-size: 18px
+	font-size: 16px
 .main__membership	
 	a
 		display: inline-block
@@ -146,6 +149,9 @@ a
 			opacity: 0
 			+tr(opacity .2s linear) 
 	a
+		+fr
+		font-size: 14px
+		font-weight: 300 
 		color: #FFF 
 .header__down
 	background: #FFF 
@@ -162,11 +168,15 @@ a
 		margin-left: 30px
 		&:first-child
 			margin: 0
-		&.is-active
-			a
-				color: $cl 
 	a
 		color: #000 
+		border-bottom: 1px dotted transparent 
+		+tr(all .2s linear)
+		&:hover
+			color: $cl 
+		&.is-active	
+			border-bottom: 1px dotted $cl 
+			color: #8B8B8B 
 .lang
 	float: right
 	li
@@ -178,8 +188,27 @@ a
 			a
 				color: #9a9a9a 
 	a
-		font-size: 14px
+		font-size: 12px
 		color: #000
+		
+.pager
+	position: fixed
+	top: 175px 
+	right: 30px
+	z-index: 100
+	li
+		margin-bottom: 8px 
+	a
+		display: block
+		width: 10px
+		height: 10px
+		border: 3px solid #fff
+		border-radius: 50%
+		+tr(border-color .2s linear)
+		&:hover
+			border-color: $cl
+		&.is-active
+			border-color: #8B8B8B 
 		 
 .page
 	position: relative
@@ -215,7 +244,10 @@ a
 		&:first-child
 			margin: 0
 	a
-		color: #fff 
+		color: #fff
+		+tr(color .2s linear) 
+		&:hover
+			color: #B6ECFF 
 .page__content
 	position: absolute
 	top: 0
@@ -242,7 +274,7 @@ a
 		display: inline-block
 		padding: 0 30px 0 60px
 		vertical-align: middle
-		font-size: 16px
+		font-size: 14px
 
 .content
 	line-height: 1.6
