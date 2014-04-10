@@ -31,7 +31,7 @@ a { text-decoration: none; }
 
 .main__center { display: table-cell; width: 940px; height: 100vh; padding-top: 200px; vertical-align: middle; text-align: center; color: white; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-.main__welcome { font-family: "Roboto", Arial, sans-serif; font-size: 30px; font-weight: 400; text-transform: uppercase; }
+.main__welcome { font-family: "Roboto", Arial, sans-serif; font-size: 30px; font-weight: 400; }
 
 .main__title { font-size: 72px; font-style: italic; }
 
@@ -103,7 +103,7 @@ a { text-decoration: none; }
 
 .page__content { position: absolute; top: 0; left: 200px; bottom: 0; width: 0; background: #92c3cf; background: rgba(146, 195, 207, 0.9); -webkit-transition: width 0.2s linear; -moz-transition: width 0.2s linear; -o-transition: width 0.2s linear; transition: width 0.2s linear; overflow: hidden; z-index: 4; }
 
-.page__content-in { position: absolute; top: 100px; left: 0; width: 340px; padding: 180px 25px 25px; visibility: hidden; opacity: 0; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
+.page__content-in { position: absolute; top: 50px; left: 0; width: 340px; padding: 180px 25px 25px; visibility: hidden; opacity: 0; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
 .page__content-in.is-active { top: 0; visibility: visible; opacity: 1; }
 
 .page__content_right { width: 50%; left: 50%; right: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-size: 0; }

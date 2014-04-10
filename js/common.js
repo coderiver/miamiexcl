@@ -59,9 +59,14 @@ function rotate_img() {
 				height = $(this).height();
 		if (scroll_top >= top) {
 			$(this).parents('.page').addClass('is-active');
+			var thiss = $(this);
+			setTimeout(function(){
+				$('.page.is-active').find('.page__content-in').first().addClass('is-active');
+			}, 500);
 		}
 		else{
 			$(this).parents('.page').removeClass('is-active');
+			page.find('.page__content-in').removeClass('is-active');
 		}
 		top = top - height;
 		if (scroll_top >= top) {
