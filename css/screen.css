@@ -86,18 +86,25 @@ a { text-decoration: none; }
 .preloader { position: absolute; top: 50%; left: 50%; width: 50px; height: 50px; margin: -25px 0 0 -25px; background: url(../img/preloader.gif); }
 
 .page { position: relative; height: 100vh; color: white; }
-.page.is-load .page__nav { -webkit-transition-delay: 0.2s; -moz-transition-delay: 0.2s; -o-transition-delay: 0.2s; transition-delay: 0.2s; left: 0; }
-.page.is-load .page__bg { visibility: visible; opacity: 1; }
+.page.is-active .page__nav { left: 0; -webkit-transition-delay: 0s; -moz-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; }
+.page.is-active .page__content { width: 390px; -webkit-transition-delay: 0.2s; -moz-transition-delay: 0.2s; -o-transition-delay: 0.2s; transition-delay: 0.2s; }
 
-.page__bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; visibility: hidden; opacity: 0; -webkit-transition: opacity 0.2s linear; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; transition: opacity 0.2s linear; z-index: 2; }
+.page__bg, .page__bg-img { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 2; }
 
-.page__nav { position: absolute; top: 0; left: -200px; right: 0; bottom: 0; width: 120px; padding: 170px 40px 40px; background: #6e939c; background: rgba(110, 147, 156, 0.9); -webkit-transition: left 0.2s linear; -moz-transition: left 0.2s linear; -o-transition: left 0.2s linear; transition: left 0.2s linear; z-index: 4; }
+.page__bg { -webkit-perspective: 1000px; -moz-perspective: 1000px; -ms-perspective: 1000px; -o-perspective: 1000px; perspective: 1000px; }
+
+.page__bg-img { background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; -webkit-transform-style: preserve-3d; -moz-transform-style: preserve-3d; -ms-transform-style: preserve-3d; -o-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-transform: rotateX(40deg); -moz-transform: rotateX(40deg); -ms-transform: rotateX(40deg); -o-transform: rotateX(40deg); transform: rotateX(40deg); -webkit-transform-origin: 100% 100%; -moz-transform-origin: 100% 100%; -ms-transform-origin: 100% 100%; -o-transform-origin: 100% 100%; transform-origin: 100% 100%; }
+
+.page__nav { position: absolute; top: 0; left: -200px; right: 0; bottom: 0; width: 120px; padding: 170px 40px 40px; background: #6e939c; background: rgba(110, 147, 156, 0.9); -webkit-transition: left 0.2s linear; -moz-transition: left 0.2s linear; -o-transition: left 0.2s linear; transition: left 0.2s linear; -webkit-transition-delay: 0.2s; -moz-transition-delay: 0.2s; -o-transition-delay: 0.2s; transition-delay: 0.2s; z-index: 4; }
 .page__nav li { margin-top: 20px; }
 .page__nav li:first-child { margin: 0; }
 .page__nav a { border-bottom: 1px dotted transparent; color: white; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
-.page__nav a:hover { border-color: #b6ecff; color: #b6ecff; }
+.page__nav a:hover, .page__nav a.is-active { border-color: #b6ecff; color: #b6ecff; }
 
-.page__content { display: none; position: absolute; top: 0; left: 200px; bottom: 0; width: 340px; padding: 180px 25px 25px; background: #92c3cf; background: rgba(146, 195, 207, 0.9); z-index: 4; }
+.page__content { position: absolute; top: 0; left: 200px; bottom: 0; width: 0; background: #92c3cf; background: rgba(146, 195, 207, 0.9); -webkit-transition: width 0.2s linear; -moz-transition: width 0.2s linear; -o-transition: width 0.2s linear; transition: width 0.2s linear; overflow: hidden; z-index: 4; }
+
+.page__content-in { position: absolute; top: 100px; left: 0; width: 340px; padding: 180px 25px 25px; visibility: hidden; opacity: 0; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
+.page__content-in.is-active { top: 0; visibility: visible; opacity: 1; }
 
 .page__content_right { width: 50%; left: 50%; right: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-size: 0; }
 .page__content_right:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
