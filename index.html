@@ -10,6 +10,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Prata' rel='stylesheet' type='text/css'>
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
+	<script src="js/underscore.js"></script>
 	<script src="js/jquery.lazyload.min.js"></script>
 	<script src="js/common.js"></script>
 </head>
@@ -30,11 +31,12 @@
 			<!-- nav -->
 			<nav class="nav">
 				<ul>
-					<li><a href="home">Home</a></li>                
-					<li><a href="about">About</a></li>
-					<li><a href="#">Contact</a></li>
-					<li><a href="#">Get Membership</a></li>
-					<li><a href="#">Login</a></li>
+					<li><a class="is-active" href="#slide0" data-slide="0">Home</a></li>
+					<li style="display: none;"><a href="#slide1" data-slide="1">Text</a></li>
+					<li><a href="#slide2" data-slide="2">About</a></li>
+					<li><a href="#slide3" data-slide="3">Contact</a></li>
+					<li><a href="#slide4" data-slide="4">Get Membership</a></li>
+					<li><a href="#slide5" data-slide="5">Login</a></li>
 				</ul>
 			</nav>
 			<!-- lang -->
@@ -48,15 +50,15 @@
 </header>
 <!-- pager -->
 <ul class="pager">
-	<li><a href="home"></a></li>
-	<li><a href="about"></a></li>
-	<li><a href="#"></a></li>
-	<li><a href="#"></a></li>
-	<li><a href="#"></a></li>
-	<li><a href="#"></a></li>
+	<li><a class="is-active" href="#slide1" data-slide="0"></a></li>
+	<li style="display: none;"><a href="#slide2" data-slide="1"></a></li>
+	<li><a href="#slide3" data-slide="2"></a></li>
+	<li><a href="#slide4" data-slide="3"></a></li>
+	<li><a href="#slide5" data-slide="4"></a></li>
+	<li><a href="#slide6" data-slide="5"></a></li>
 </ul>
 <!-- page -->
-<div id="home" class="page">
+<div id="slide0" class="page">
 	<!-- main -->
 	<div class="main">
 		<div class="main__in">
@@ -72,18 +74,18 @@
 	</div>
 </div>
 <!-- text -->
-<div class="text">
+<div id="slide1" class="text">
 	<div class="text__in">Mami Exclusive represents  the ultimate luxury for those who have the ways and means to savor the finer things in life. Accurately personalized, we arrange the program around you, your life, your schedule, your needs and your tastes.</div>
 </div>
 <!-- page -->
-<div id="about" class="page">
+<div id="slide2" class="page">
 	<!-- <a class="page__bg lazy-load" data-original="img/page2.jpg" href="#" style="background-image: url(img/blank.gif)"></a> -->
 	<a class="page__bg" href="#">
 		<span class="page__bg-img" style="background-image: url(img/page2.jpg)"></span>
 	</a>
 	<nav class="page__nav">
 		<ul>
-			<li><a class="is-active" href="page-tab-1">About Us</a></li>
+			<li><a href="page-tab-1">About Us</a></li>
 			<li><a href="page-tab-2">Our Team</a></li>
 			<li><a href="page-tab-3">Our Philosophy</a></li>
 			<li><a href="page-tab-4">Our Mission</a></li>
@@ -115,8 +117,88 @@
 	<!-- preloader -->
 	<!-- <div class="preloader"></div> -->
 </div>
+<!-- page -->
+<div id="slide3" class="page">
+	<!-- <a class="page__bg lazy-load" data-original="img/page2.jpg" href="#" style="background-image: url(img/blank.gif)"></a> -->
+	<a class="page__bg" href="#">
+		<span class="page__bg-img" style="background-image: url(img/page2.jpg)"></span>
+	</a>
+	<nav class="page__nav">
+		<ul>
+			<li><a href="page-tab-21">About Us</a></li>
+			<li><a href="page-tab-22">Our Team</a></li>
+			<li><a href="page-tab-23">Our Philosophy</a></li>
+			<li><a href="page-tab-24">Our Mission</a></li>
+			<li><a href="page-tab-25">Our Clients</a></li>
+		</ul>
+	</nav>
+	<div class="page__content">
+		<div id="page-tab-21" class="page__content-in">
+			<div class="title">About Us</div>
+			<div class="content">Miami Exclusive delivers exceptional quality concierge and errand services. We empower our clients by providing administrative and operational assistance and also offer valuable discounts on a wide range of time management products and services.</div>
+		</div>
+		<div id="page-tab-22" class="page__content-in">
+			<div class="title">Our Team</div>
+			<div class="content">Miami Exclusive delivers exceptional quality concierge and errand services. We empower our clients by providing administrative and operational assistance and also offer valuable discounts on a wide range of time management products and services.</div>
+		</div>
+		<div id="page-tab-23" class="page__content-in">
+			<div class="title">Our Philosophy</div>
+			<div class="content">Miami Exclusive delivers exceptional quality concierge and errand services. We empower our clients by providing administrative and operational assistance and also offer valuable discounts on a wide range of time management products and services.</div>
+		</div>
+		<div id="page-tab-24" class="page__content-in">
+			<div class="title">Our Mission</div>
+			<div class="content">Miami Exclusive delivers exceptional quality concierge and errand services. We empower our clients by providing administrative and operational assistance and also offer valuable discounts on a wide range of time management products and services.</div>
+		</div>
+		<div id="page-tab-25" class="page__content-in">
+			<div class="title">Our Clients</div>
+			<div class="content">Miami Exclusive delivers exceptional quality concierge and errand services. We empower our clients by providing administrative and operational assistance and also offer valuable discounts on a wide range of time management products and services.</div>
+		</div>
+	</div>
+	<!-- preloader -->
+	<!-- <div class="preloader"></div> -->
+</div>
+<!-- page -->
+<div id="slide4" class="page">
+	<!-- <a class="page__bg lazy-load" data-original="img/page2.jpg" href="#" style="background-image: url(img/blank.gif)"></a> -->
+	<a class="page__bg" href="#">
+		<span class="page__bg-img" style="background-image: url(img/page2.jpg)"></span>
+	</a>
+	<nav class="page__nav">
+		<ul>
+			<li><a href="page-tab-31">About Us</a></li>
+			<li><a href="page-tab-32">Our Team</a></li>
+			<li><a href="page-tab-33">Our Philosophy</a></li>
+			<li><a href="page-tab-34">Our Mission</a></li>
+			<li><a href="page-tab-35">Our Clients</a></li>
+		</ul>
+	</nav>
+	<div class="page__content">
+		<div id="page-tab-31" class="page__content-in">
+			<div class="title">About Us</div>
+			<div class="content">Miami Exclusive delivers exceptional quality concierge and errand services. We empower our clients by providing administrative and operational assistance and also offer valuable discounts on a wide range of time management products and services.</div>
+		</div>
+		<div id="page-tab-32" class="page__content-in">
+			<div class="title">Our Team</div>
+			<div class="content">Miami Exclusive delivers exceptional quality concierge and errand services. We empower our clients by providing administrative and operational assistance and also offer valuable discounts on a wide range of time management products and services.</div>
+		</div>
+		<div id="page-tab-33" class="page__content-in">
+			<div class="title">Our Philosophy</div>
+			<div class="content">Miami Exclusive delivers exceptional quality concierge and errand services. We empower our clients by providing administrative and operational assistance and also offer valuable discounts on a wide range of time management products and services.</div>
+		</div>
+		<div id="page-tab-34" class="page__content-in">
+			<div class="title">Our Mission</div>
+			<div class="content">Miami Exclusive delivers exceptional quality concierge and errand services. We empower our clients by providing administrative and operational assistance and also offer valuable discounts on a wide range of time management products and services.</div>
+		</div>
+		<div id="page-tab-35" class="page__content-in">
+			<div class="title">Our Clients</div>
+			<div class="content">Miami Exclusive delivers exceptional quality concierge and errand services. We empower our clients by providing administrative and operational assistance and also offer valuable discounts on a wide range of time management products and services.</div>
+		</div>
+	</div>
+	<!-- preloader -->
+	<!-- <div class="preloader"></div> -->
+</div>
 <!-- footer -->
-<footer class="footer">
+<footer id="slide5" class="footer">
 	<div class="footer__text">Premium Travel and Concierge Services.</div>
 	<div class="copyright">
 		<a href="#">SITE BY WORKFILMS</a>
