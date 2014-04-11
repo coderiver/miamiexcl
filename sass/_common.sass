@@ -242,11 +242,12 @@ a
 	z-index: 2 
 .page__bg
 	+perspective(1000px)
+	cursor: default
 .page__bg-in
 	+transform-style(preserve-3d)
 	+transform(rotateX(40deg))
 	+transform-origin(100%, 100%)
-	a
+	a,div
 		cursor: default
 .page__bg-item
 	+cover
