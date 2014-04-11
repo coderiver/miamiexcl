@@ -104,13 +104,13 @@ a { text-decoration: none; }
 .page__nav a { border-bottom: 1px dotted transparent; color: white; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
 .page__nav a:hover, .page__nav a.is-active { border-color: #b6ecff; color: #b6ecff; }
 
-.page__content { position: absolute; top: 0; left: 200px; bottom: 0; width: 0; -webkit-transition: width 0.2s linear; -moz-transition: width 0.2s linear; -o-transition: width 0.2s linear; transition: width 0.2s linear; overflow: hidden; z-index: 4; }
+.page__content { position: absolute; top: 0; top: 100px; left: 200px; bottom: 0; width: 0; -webkit-transition: width 0.2s linear; -moz-transition: width 0.2s linear; -o-transition: width 0.2s linear; transition: width 0.2s linear; overflow: hidden; z-index: 4; }
 
 .page__content-in { position: absolute; top: 50px; left: 0; bottom: 0; width: 340px; padding: 180px 25px 25px; visibility: hidden; opacity: 0; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
 .page__content-in.is-active { top: 0; visibility: visible; opacity: 1; }
 .page__content-in .title, .page__content-in .content { position: relative; z-index: 2; }
 
-.page__content-bg { position: absolute; top: 0; top: 100px; left: 0; right: 0; bottom: 0; -webkit-transition: opacity 0.2s linear, background 0.6s linear; -moz-transition: opacity 0.2s linear, background 0.6s linear; -o-transition: opacity 0.2s linear, background 0.6s linear; transition: opacity 0.2s linear, background 0.6s linear; opacity: 0.9; }
+.page__content-bg { position: absolute; top: 0; top: 0px; left: 0; right: 0; bottom: 0; -webkit-transition: opacity 0.2s linear, background 0.6s linear; -moz-transition: opacity 0.2s linear, background 0.6s linear; -o-transition: opacity 0.2s linear, background 0.6s linear; transition: opacity 0.2s linear, background 0.6s linear; opacity: 0.9; }
 
 .page__content_right { width: 50%; left: 50%; right: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-size: 0; }
 .page__content_right:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }
@@ -120,6 +120,8 @@ a { text-decoration: none; }
 
 .title { position: relative; padding: 25px 0; font-size: 50px; }
 .title:before { content: ""; position: absolute; top: 0; left: 0; width: 20px; height: 1px; background: white; }
+
+.centerme, .page__nav ul { position: absolute; top: 50%; margin-top: -100px; }
 
 .text { position: relative; background: #e9e6d6; overflow: hidden; }
 .text:before { content: ""; position: absolute; top: 50%; left: 50%; width: 800px; height: 800px; margin: -400px 0 0 -400px; background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, rgba(255, 255, 255, 0.7)), color-stop(100%, rgba(255, 255, 255, 0))); background-image: -webkit-radial-gradient(50% 50%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)); background-image: -moz-radial-gradient(50% 50%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)); background-image: -o-radial-gradient(50% 50%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)); background-image: radial-gradient(50% 50%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)); }

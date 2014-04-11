@@ -1,5 +1,5 @@
 $(document).ready(function() {
-$('html,body').animate({scrollTop:0}, 1);
+ $(this).scrollTop(0);
 
 var header = $('.header'),
 		header_top = header.find('.header__links li.is-center a'),
