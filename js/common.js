@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+$('html,body').animate({scrollTop:0}, 1);
 
 var header = $('.header'),
 		header_top = header.find('.header__links li.is-center a'),
@@ -67,7 +67,14 @@ function tabs() {
 	var nav = page.find('.page__nav'),
 			wrap = page.find('.page__content');
 	nav.find('a').on('click', function(){
-		$('.page__bg-in').trigger('click');
+		//$('.page__bg-in').trigger('click');
+		
+		// ====================== correct bg foto
+		ind = $(this).parent().index();
+		pbgin = nav.prev().children('.page__bg-in');
+		gotoslideakella(ind, pbgin);
+
+		// ====================== correct bg foto
 		var item = $(this).attr('href'),
 				color = $(this).data('background');
 				color1 = hexToRgb($(this).data('backgroundmenu'));
@@ -184,7 +191,29 @@ function preloadImages(images, callback) {
     });
   });
 };
+function gotoslideakella(n, pbg){
+	var act = pbg.find('.page__bg-item.is-active'),
+	    s_next = pbg.children(':nth-child('+(n+1)+')'),
+	    image = s_next.data('image'),
+	    preloader = pbg.parent().find('.preloader');
+	    pbg.find('.page__bg-item').removeClass('is-active');
 
+	if (!s_next.hasClass('is-loaded')) {
+		if (s_next.length) {
+			preloadImages([image], function(){
+				s_next.addClass('is-active');
+				s_next.addClass('is-loaded');
+			});
+		}
+		else{
+			$(this).find('.page__bg-item').first().addClass('is-active');	
+			preloader.hide();
+		}
+	}
+	else{
+		s_next.addClass('is-active');
+	}
+}
 var page_bg = $('.page__bg-in');
 page_bg.on('click', function(){
 	var act = $(this).find('.page__bg-item.is-active'),
