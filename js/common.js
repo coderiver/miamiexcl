@@ -168,8 +168,8 @@ function prev(){
 		goto(cur-1,900)
 	}
 }
-prev_u = _.debounce(prev, 60, true)
-next_u = _.debounce(next, 60, true)
+prev_u = _.debounce(prev, 160, true)
+next_u = _.debounce(next, 160, true)
 
 var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel" //FF doesn't recognize mousewheel as of FF3.x
 
