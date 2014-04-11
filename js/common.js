@@ -1,6 +1,10 @@
 $(document).ready(function() {
  $(this).scrollTop(0);
 
+ var isiPad = navigator.userAgent.match(/iPad/i) != null;
+
+
+
 var header = $('.header'),
 		header_top = header.find('.header__links li.is-center a'),
 		body = $('html, body'),
@@ -20,7 +24,9 @@ if (lazy.length) {
 };
 
 // rotate
+
 function rotate_img() {
+	if(!isiPad){
 	var scroll_top = $(window).scrollTop(),
 			el = $('.page__bg'),
 			grad = 40;
@@ -52,8 +58,16 @@ function rotate_img() {
 			}
 		};
 	});
+	}
+	else{
+		$('.page').addClass('is-active');
+		$('.page.is-active').find('.page__content-in').first().addClass('is-active');
+		$('.page.is-active').find('.page__nav li:first a').addClass('is-active');
+		$('.page__bg').find('.page__bg-in').css({'-webkit-transform': 'rotateX(0deg)', '-moz-transform': 'rotateX(0deg)', '-o-transform': 'rotateX(0deg)', '-ms-transform': 'rotateX(0deg)'});
+	}
 }
 rotate_img();
+
 function hexToRgb(hex) {
     var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result ? {
