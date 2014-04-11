@@ -74,8 +74,8 @@ function tabs() {
 				if(color1==null){color1 = hexToRgb('#999999');}
 				//alert(hexToRgb('#000000'));
 				console.log(color1);
-				color21 = 'rgba('+color1.r+','+color1.g+','+color1.b+',.85)';
-				if(!color21){color21 = 'rgba(150,150,150,0.85)';}
+				color21 = 'rgba('+color1.r+','+color1.g+','+color1.b+',.9)';
+				if(!color21){color21 = 'rgba(150,150,150,0.9)';}
 		$(this).parents('.page').find('.page__content-in').removeClass('is-active');
 		$('#' + item).addClass('is-active');
 		$(this).parents('.page').find('.page__content-bg').css('background', color);
