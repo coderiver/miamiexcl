@@ -107,7 +107,7 @@ $('.nav a, .pager a').on('click', function() {
 var n = 0;
 function goto(n, time){
 	if(!(b.hasClass('is-running'))){
-
+		// alert(n);
 		//console.log('go');
 
 		b.addClass('is-running');
@@ -139,8 +139,10 @@ function goto(n, time){
 	}
 }
 function next(){
-	size = $('.nav li').length;
+
+	size = $('.pager li').length;
 	size = size-1;
+	// alert(size);
 	cur = $('.nav a.is-active, .pager a.is-active').data('slide');
 	if(cur<size){
 		goto(cur+1,900)
