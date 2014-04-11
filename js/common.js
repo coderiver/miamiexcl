@@ -216,26 +216,26 @@ function gotoslideakella(n, pbg){
 }
 var page_bg = $('.page__bg-in');
 page_bg.on('click', function(){
-	var act = $(this).find('.page__bg-item.is-active'),
-	    s_next = act.next(),
-	    image = s_next.data('image'),
-	    preloader = $(this).parent().find('.preloader');
-	$(this).find('.page__bg-item').removeClass('is-active');
-	if (!s_next.hasClass('is-loaded')) {
-		if (s_next.length) {
-			preloadImages([image], function(){
-				s_next.addClass('is-active');
-				s_next.addClass('is-loaded');
-			});
-		}
-		else{
-			$(this).find('.page__bg-item').first().addClass('is-active');	
-			preloader.hide();
-		}
-	}
-	else{
-		s_next.addClass('is-active');
-	}
+	// var act = $(this).find('.page__bg-item.is-active'),
+	//     s_next = act.next(),
+	//     image = s_next.data('image'),
+	//     preloader = $(this).parent().find('.preloader');
+	// $(this).find('.page__bg-item').removeClass('is-active');
+	// if (!s_next.hasClass('is-loaded')) {
+	// 	if (s_next.length) {
+	// 		preloadImages([image], function(){
+	// 			s_next.addClass('is-active');
+	// 			s_next.addClass('is-loaded');
+	// 		});
+	// 	}
+	// 	else{
+	// 		$(this).find('.page__bg-item').first().addClass('is-active');	
+	// 		preloader.hide();
+	// 	}
+	// }
+	// else{
+	// 	s_next.addClass('is-active');
+	// }
 	return false;
 })
 
