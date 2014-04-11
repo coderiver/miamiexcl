@@ -54,17 +54,32 @@ function rotate_img() {
 	});
 }
 rotate_img();
-
+function hexToRgb(hex) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null;
+}
 // tabs
 function tabs() {
 	var nav = page.find('.page__nav'),
 			wrap = page.find('.page__content');
 	nav.find('a').on('click', function(){
+		$('.page__bg-in').trigger('click');
 		var item = $(this).attr('href'),
 				color = $(this).data('background');
+				color1 = hexToRgb($(this).data('backgroundmenu'));
+				if(color1==null){color1 = hexToRgb('#999999');}
+				//alert(hexToRgb('#000000'));
+				console.log(color1);
+				color21 = 'rgba('+color1.r+','+color1.g+','+color1.b+',.85)';
+				if(!color21){color21 = 'rgba(150,150,150,0.85)';}
 		$(this).parents('.page').find('.page__content-in').removeClass('is-active');
 		$('#' + item).addClass('is-active');
 		$(this).parents('.page').find('.page__content-bg').css('background', color);
+		nav.css('background', color21);
 		$(this).parents('.page').find('.page__nav a').removeClass('is-active');
 		$(this).addClass('is-active');
 		return false;
