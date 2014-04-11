@@ -21,7 +21,10 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 @font-face { font-family: Garamond; src: url("fonts/garamond.eot"); src: url("fonts/garamond.eot?#iefix") format("embedded-opentype"), url("fonts/garamond.woff") format("woff"), url("fonts/garamond.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
-body { min-width: 1000px; font-family: "Prata", Arial, serif; font-size: 14px; line-height: 1.4; }
+body { min-width: 1000px; font-family: "Prata", Arial, serif; font-size: 14px; line-height: 1.4; overflow: hidden; }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-device-pixel-ratio: 1) { body { overflow: auto; } }
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-device-pixel-ratio: 2) { body { overflow: auto; } }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) { body { overflow: auto; } }
 
 a { text-decoration: none; }
 
