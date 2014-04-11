@@ -12,6 +12,7 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/underscore.js"></script>
 	<script src="js/jquery.lazyload.min.js"></script>
+	<script src="js/cycle.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -79,20 +80,27 @@
 </div>
 <!-- page -->
 <div id="slide2" class="page">
-	<!-- <a class="page__bg lazy-load" data-original="img/page2.jpg" href="#" style="background-image: url(img/blank.gif)"></a> -->
 	<a class="page__bg" href="#">
-		<span class="page__bg-img" style="background-image: url(img/page2.jpg)"></span>
+		<div class="page__bg-in">
+			<div class="page__bg-item is-active is-loaded" data-image="img/page2.jpg" style="background-image: url(img/page2.jpg)"></div>
+			<div class="page__bg-item" data-image="http://lorempixel.com/1920/1080" style="background-image: url(http://lorempixel.com/1920/1080)"></div>
+			<div class="page__bg-item" data-image="http://lorempixel.com/1900/1060" style="background-image: url(http://lorempixel.com/1900/1060)"></div>
+			<div class="page__bg-item" data-image="http://lorempixel.com/1880/1040" style="background-image: url(http://lorempixel.com/1880/1040)"></div>
+		</div>
+		<!-- preloader -->
+		<div class="preloader"></div>
 	</a>
 	<nav class="page__nav">
 		<ul>
-			<li><a href="page-tab-1">About Us</a></li>
-			<li><a href="page-tab-2">Our Team</a></li>
-			<li><a href="page-tab-3">Our Philosophy</a></li>
-			<li><a href="page-tab-4">Our Mission</a></li>
-			<li><a href="page-tab-5">Our Clients</a></li>
+			<li><a href="page-tab-1" data-background="red">About Us</a></li>
+			<li><a href="page-tab-2" data-background="green">Our Team</a></li>
+			<li><a href="page-tab-3" data-background="blue">Our Philosophy</a></li>
+			<li><a href="page-tab-4" data-background="green">Our Mission</a></li>
+			<li><a href="page-tab-5" data-background="red">Our Clients</a></li>
 		</ul>
 	</nav>
 	<div class="page__content">
+		<div class="page__content-bg" style="background: red"></div>
 		<div id="page-tab-1" class="page__content-in">
 			<div class="title">About Us</div>
 			<div class="content">Miami Exclusive delivers exceptional quality concierge and errand services. We empower our clients by providing administrative and operational assistance and also offer valuable discounts on a wide range of time management products and services.</div>
@@ -119,9 +127,15 @@
 </div>
 <!-- page -->
 <div id="slide3" class="page">
-	<!-- <a class="page__bg lazy-load" data-original="img/page2.jpg" href="#" style="background-image: url(img/blank.gif)"></a> -->
 	<a class="page__bg" href="#">
-		<span class="page__bg-img" style="background-image: url(img/page2.jpg)"></span>
+		<div class="page__bg-in">
+			<div class="page__bg-item is-active is-loaded" data-image="img/page2.jpg" style="background-image: url(img/page2.jpg)"></div>
+			<div class="page__bg-item" data-image="http://lorempixel.com/1920/1080" style="background-image: url(http://lorempixel.com/1920/1080)"></div>
+			<div class="page__bg-item" data-image="http://lorempixel.com/1900/1060" style="background-image: url(http://lorempixel.com/1900/1060)"></div>
+			<div class="page__bg-item" data-image="http://lorempixel.com/1880/1040" style="background-image: url(http://lorempixel.com/1880/1040)"></div>
+		</div>
+		<!-- preloader -->
+		<div class="preloader"></div>
 	</a>
 	<nav class="page__nav">
 		<ul>
@@ -159,9 +173,15 @@
 </div>
 <!-- page -->
 <div id="slide4" class="page">
-	<!-- <a class="page__bg lazy-load" data-original="img/page2.jpg" href="#" style="background-image: url(img/blank.gif)"></a> -->
 	<a class="page__bg" href="#">
-		<span class="page__bg-img" style="background-image: url(img/page2.jpg)"></span>
+		<div class="page__bg-in">
+			<div class="page__bg-item is-active is-loaded" data-image="img/page2.jpg" style="background-image: url(img/page2.jpg)"></div>
+			<div class="page__bg-item" data-image="http://lorempixel.com/1920/1080" style="background-image: url(http://lorempixel.com/1920/1080)"></div>
+			<div class="page__bg-item" data-image="http://lorempixel.com/1900/1060" style="background-image: url(http://lorempixel.com/1900/1060)"></div>
+			<div class="page__bg-item" data-image="http://lorempixel.com/1880/1040" style="background-image: url(http://lorempixel.com/1880/1040)"></div>
+		</div>
+		<!-- preloader -->
+		<div class="preloader"></div>
 	</a>
 	<nav class="page__nav">
 		<ul>

@@ -233,7 +233,7 @@ a
 		.page__content
 			width: 390px
 			+transition-delay(.2s)
-.page__bg, .page__bg-img
+.page__bg, .page__bg-in, .page__bg-item
 	position: absolute
 	top: 0
 	left: 0
@@ -242,14 +242,18 @@ a
 	z-index: 2 
 .page__bg
 	+perspective(1000px)
-.page__bg-img
-	+cover
-	//visibility: hidden
-	//opacity: 0 
+.page__bg-in
 	+transform-style(preserve-3d)
-	//+tr(opacity .2s linear)
 	+transform(rotateX(40deg))
 	+transform-origin(100%, 100%)
+.page__bg-item
+	+cover
+	visibility: hidden
+	opacity: 0 
+	+tr(opacity .2s linear)
+	&.is-active
+		visibility: visible
+		opacity: 1 
 .page__nav
 	position: absolute
 	top: 0
@@ -280,8 +284,6 @@ a
 	left: 200px
 	bottom: 0
 	width: 0
-	background: #92c3cf 
-	background: rgba(146,195,207,.9)
 	+tr(width .2s linear) 
 	overflow: hidden
 	z-index: 4 
@@ -289,6 +291,7 @@ a
 	position: absolute
 	top: 50px
 	left: 0
+	bottom: 0
 	width: 340px
 	padding: 180px 25px 25px 
 	visibility: hidden
@@ -298,6 +301,17 @@ a
 		top: 0
 		visibility: visible
 		opacity: 1 
+	.title, .content
+		position: relative
+		z-index: 2 
+.page__content-bg
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	+tr(opacity .2s linear)
+	opacity: .4
 
 
 .page__content_right
