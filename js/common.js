@@ -145,7 +145,7 @@ function goto(n, time){
 		}
 		
 		//hilite nav
-		setTimeout(function(){b.removeClass('is-running');},1300);
+		setTimeout(function(){b.removeClass('is-running');},1600);
 
 	}
 	else{
