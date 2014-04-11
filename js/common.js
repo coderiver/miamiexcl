@@ -33,7 +33,7 @@ function rotate_img() {
 	el.each(function(){
 		var top = $(this).offset().top,
 				height = $(this).height();
-		if (scroll_top == top) {
+		if (scroll_top > (top-10) && scroll_top < (top+10)) {
 			$(this).parents('.page').addClass('is-active');
 			var thiss = $(this);
 			setTimeout(function(){
