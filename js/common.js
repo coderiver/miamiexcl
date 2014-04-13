@@ -3,7 +3,15 @@ $(document).ready(function() {
 
  var isiPad = navigator.userAgent.match(/iPad/i) != null;
 
-
+if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+  //$("body").addClass("mac");
+  isiPad = true;
+} else {
+  //$("body").addClass("pc");
+}
+if(isiPad){
+	$('body').addClass('simple');
+}
 
 var header = $('.header'),
 	header_top = header.find('.header__links li.is-center a'),
@@ -174,21 +182,12 @@ next_u = _.debounce(next, 160, true)
 var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel" //FF doesn't recognize mousewheel as of FF3.x
 
 $('body').bind(mousewheelevt, function(e){
-	var evt = window.event || e //equalize event object     
-	evt = evt.originalEvent ? evt.originalEvent : evt; //convert to originalEvent if possible               
-	var delta = evt.detail ? evt.detail*(-40) : evt.wheelDelta //check for detail first, because it is used by Opera and FF
-	if(delta > 0) {
-	  prev_u();
-	}
-	else{
-	  next_u();
-	}   
-	return false;
+
 });
 
 $(window).scroll(function(event) {
 	// rotate
-	rotate_img();
+	//rotate_img();
 });
 
 // slider

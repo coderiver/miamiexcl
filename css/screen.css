@@ -25,6 +25,7 @@ body { min-width: 1000px; font-family: "Prata", Arial, serif; font-size: 14px; l
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-device-pixel-ratio: 1) { body { overflow: auto; } }
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-device-pixel-ratio: 2) { body { overflow: auto; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { body { overflow: auto; } }
+body.simple { overflow: auto; }
 
 a { text-decoration: none; }
 
@@ -106,12 +107,14 @@ a { text-decoration: none; }
 .page__bg-item.is-active { visibility: visible; opacity: 1; }
 
 .page__nav { position: absolute; top: 0; top: 100px; left: -200px; right: 0; bottom: 0; width: 120px; padding: 70px 40px 40px; background: #6e939c; background: rgba(110, 147, 156, 0.9); background: rgba(58, 121, 161, 0.9); -webkit-transition: left 0.2s linear, background 0.6s linear; -moz-transition: left 0.2s linear, background 0.6s linear; -o-transition: left 0.2s linear, background 0.6s linear; transition: left 0.2s linear, background 0.6s linear; -webkit-transition-delay: 0.2s; -moz-transition-delay: 0.2s; -o-transition-delay: 0.2s; transition-delay: 0.2s; z-index: 4; }
+.simple .page__nav { top: 0; }
 .page__nav li { margin-top: 20px; }
 .page__nav li:first-child { margin: 0; }
 .page__nav a { border-bottom: 1px dotted transparent; color: white; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
 .page__nav a:hover, .page__nav a.is-active { border-color: #b6ecff; color: #b6ecff; }
 
 .page__content { position: absolute; top: 0; top: 100px; left: 200px; bottom: 0; width: 0; -webkit-transition: width 0.2s linear; -moz-transition: width 0.2s linear; -o-transition: width 0.2s linear; transition: width 0.2s linear; overflow: hidden; z-index: 4; }
+.simple .page__content { top: 0; }
 
 .page__content-in { position: absolute; top: 50px; left: 0; bottom: 0; width: 340px; padding: 180px 25px 25px; visibility: hidden; opacity: 0; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
 .page__content-in.is-active { top: 0; visibility: visible; opacity: 1; }
@@ -140,6 +143,11 @@ a { text-decoration: none; }
 .copyright { padding: 13px 0; background: #c8c1ac; text-align: center; }
 .copyright a { border-bottom: 1px dotted transparent; font-family: "Roboto", Arial, sans-serif; text-transform: uppercase; font-size: 10px; color: #857e6b; -webkit-transition: border-color 0.2s linear; -moz-transition: border-color 0.2s linear; -o-transition: border-color 0.2s linear; transition: border-color 0.2s linear; }
 .copyright a:hover { border-color: #857e6b; }
+
+.fotogal { position: absolute; top: 100px; right: 100px; left: 300px; bottom: 100px; z-index: 90; }
+
+#slide3 { background: black; }
+#slide3 .page__bg { opacity: 0.1; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }

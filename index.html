@@ -6,11 +6,13 @@
 	<title>Miami Exclusive</title>
 	<meta name="viewport" content="width=1100">
 	<link rel="stylesheet" media="screen" href="css/screen.css">
+	<link rel="stylesheet" media="screen" href="css/fotorama.css">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Prata' rel='stylesheet' type='text/css'>
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
 	<script src="js/underscore.js"></script>
+	<script src="js/fotorama.js"></script>
 	<script src="js/jquery.lazyload.min.js"></script>
 	<script src="js/cycle.js"></script>
 	<script src="js/common.js"></script>
@@ -55,8 +57,8 @@
 	<li style="display: none;"><a href="#slide2" data-slide="1"></a></li>
 	<li><a href="#slide3" data-slide="2"></a></li>
  	<li><a href="#slide4" data-slide="3"></a></li>
-<!--	<li><a href="#slide5" data-slide="4"></a></li>
-	<li><a href="#slide6" data-slide="5"></a></li> -->
+	<li><a href="#slide5" data-slide="4"></a></li>
+	<!--<li><a href="#slide6" data-slide="5"></a></li> -->
 </ul>
 <!-- page -->
 <div id="slide0" class="page">
@@ -137,8 +139,43 @@
 	<!-- <div class="preloader"></div> -->
 </div>
 
+
+<div id="slide3" class="page">
+	<a class="page__bg" href="#">
+		<div class="page__bg-in">
+			<div class="page__bg-item is-active is-loaded" data-image="img/1.jpg" style="background-image: url(img/1.jpg)"></div>
+		</div>
+		<!-- preloader -->
+		<div class="preloader"></div>
+	</a>
+	<nav class="page__nav" style="background-color: rgba(116, 101, 66, 0.901961);">
+		<ul>
+			<li><a href="page-tab-1" data-background="#67adda" data-backgroundmenu="#3a79a1">About Us</a></li>
+			<li><a href="page-tab-2" data-background="#8159af" data-backgroundmenu="#644686">Our Team</a></li>
+			<li><a href="page-tab-3" data-background="#94835a" data-backgroundmenu="#746542">Our Philosophy</a></li>
+			<li><a href="page-tab-4" data-background="#716b9f" data-backgroundmenu="#4c4774">Our Mission</a></li>
+			<li><a href="page-tab-5" data-background="#905b5b" data-backgroundmenu="#704040">Our Clients</a></li>
+		</ul>
+	</nav>
+	<div class="fotogal">
+		<div class="fotorama" data-nav="thumbs">
+			<img src="img/11.jpg" alt="">
+			<img src="img/22.jpg" alt="">
+			<img src="img/33.jpg" alt="">
+			<img src="img/44.jpg" alt="">
+			<img src="img/55.jpg" alt="">
+			<img src="img/66.jpg" alt="">
+			<img src="img/77.jpg" alt="">
+			<img src="img/88.jpg" alt="">
+		</div>
+	</div>
+	<!-- preloader -->
+	<!-- <div class="preloader"></div> -->
+</div>
+
+
 <!-- footer -->
-<footer id="slide3" class="footer">
+<footer id="slide4" class="footer">
 	<div class="footer__text">Premium Travel and Concierge Services.</div>
 	<div class="copyright">
 		<a href="#">SITE BY WORKFILMS</a>
