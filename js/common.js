@@ -6,9 +6,9 @@ $(document).ready(function() {
 
 
 var header = $('.header'),
-		header_top = header.find('.header__links li.is-center a'),
-		body = $('html, body'),
-		b = $('body'),
+	header_top = header.find('.header__links li.is-center a'),
+	body = $('html, body'),
+	b = $('body'),
     lazy = $('.lazy-load'),
     nav = $('.nav, .pager'),
     page = $('.page');
@@ -145,7 +145,7 @@ function goto(n, time){
 		}
 		
 		//hilite nav
-		setTimeout(function(){b.removeClass('is-running');},1600);
+		setTimeout(function(){b.removeClass('is-running');},1900);
 
 	}
 	else{
@@ -178,10 +178,10 @@ $('body').bind(mousewheelevt, function(e){
 	evt = evt.originalEvent ? evt.originalEvent : evt; //convert to originalEvent if possible               
 	var delta = evt.detail ? evt.detail*(-40) : evt.wheelDelta //check for detail first, because it is used by Opera and FF
 	if(delta > 0) {
-	  prev();
+	  prev_u();
 	}
 	else{
-	  next();
+	  next_u();
 	}   
 	return false;
 });
