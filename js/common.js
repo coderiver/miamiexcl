@@ -5,9 +5,10 @@ $(document).ready(function() {
 
 if (navigator.userAgent.indexOf('Mac OS X') != -1) {
   //$("body").addClass("mac");
-  isiPad = true;
+  
 } else {
   //$("body").addClass("pc");
+  isiPad = true;
 }
 if(isiPad){
 	$('body').addClass('simple');
